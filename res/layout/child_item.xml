@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <CheckBox
+        android:id="@+id/param_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked" />
+
+    <TextView
+        android:id="@+id/param_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/param_checkbox"
+        android:layout_centerVertical="true"
+        android:paddingLeft="25dp" />
+
+    <EditText
+        android:id="@+id/param_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/param_key"
+        android:hint="value"  />
+
+    <TextView
+        android:id="@+id/param_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/param_value"
+        android:paddingLeft="25dp" />
+
+  <!--   <TextView
+        android:id="@+id/param_exp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/param_unit"
+        android:paddingLeft="25dp" /> -->
+
+    <ImageView
+        android:id="@+id/param_exp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_action_action_about" />
+
+</RelativeLayout>

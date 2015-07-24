@@ -1,0 +1,545 @@
+{
+  "ITGSend":{
+    "flow_opts":{
+      "natTraversel":{
+        "enable":false,
+        "param":"-H",
+        "value":"none",
+        "unit":"none",
+        "options":[],
+        "exp":""
+      },
+      "meter":{
+        "enable":false,
+        "param":"-m",
+        "value":"owdm",
+        "unit":"none",
+        "options":["owdm","rttm"],
+        "exp":"owdm(one-way delay meter),rttm: round-trip time meter"
+      },
+      "duration":{
+        "enable":false,
+        "param":"-t",
+        "value":"10000",
+        "unit":"ms",
+        "options":[],
+        "exp":""
+      },
+      "packetNumber":{
+        "enable":false,
+        "param":"-z",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":""
+      },
+      "kbytesNumber":{
+        "enable":false,
+        "param":"-k",
+        "value":"",
+        "unit":"kbytes",
+        "options":[],
+        "exp":""
+      },
+      "delay":{
+        "enable":false,
+        "param":"-d",
+        "value":"0",
+        "unit":"ms",
+        "options":[],
+        "exp":""
+      },
+      "ds_byte":{
+        "enable":false,
+        "param":"-b",
+        "value":"0",
+        "unit":"byte",
+        "options":[],
+        "exp":""
+      },
+      "ttl_byte":{
+        "enable":false,
+        "param":"-f",
+        "value":"64",
+        "unit":"byte",
+        "options":[],
+        "exp":""
+      },
+      "dest_address":{
+        "enable":false,
+        "param":"-a",
+        "value":"127.0.0.1",
+        "unit":"none",
+        "options":[],
+        "exp":""
+      },
+      "src_address":{
+        "enable":false,
+        "param":"-sa",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"Set by O.S"
+      },
+      "dest_port":{
+        "enable":false,
+        "param":"-rp",
+        "value":"9524",
+        "unit":"none",
+        "options":[],
+        "exp":""
+      },
+      "src_port":{
+        "enable":false,
+        "param":"-sp",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"Set by O.S"
+      },
+      "interface":{
+        "enable":false,
+        "param":"-i",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"Bind to given interface"
+      },
+      "payload_metadata":{
+        "enable":false,
+        "param":"-p",
+        "value":"0",
+        "unit":"none",
+        "options":[0,1,2],
+        "exp":""
+      },
+      "protocol":{
+        "enable":false,
+        "param":"-T",
+        "value":"UDP",
+        "unit":"none",
+        "options":["UDP","TCP"],
+        "exp":"ICMP,SCTP and DCCP aren't supported"
+      },
+      "disableTCPNagle":{
+        "enable":false,
+        "param":"-D",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":""
+      }
+      
+    },
+    "log_opts":{
+      "logfile":{
+        "enable":false,
+        "param":"-l",
+        "value":"ITGSend",
+        "unit":"none",
+        "options":[],
+        "exp":""
+      },
+      "sent_log_server_address":{
+        "enable":false,
+        "param":"-L",
+        "value":"127.0.0.1 UDP",
+        "unit":"none",
+        "options":[],
+        "exp":"Server IP Address and UDP or TCP Protocol"
+      },
+      "receiver_logfile":{
+        "enable":false,
+        "param":"-x",
+        "value":"ITGRecv",
+        "unit":"none",
+        "options":[],
+        "exp":""
+      },
+      "recv_log_server_address":{
+        "enable":false,
+        "param":"-X",
+        "value":"127.0.0.1 UDP",
+        "unit":"none",
+        "options":[],
+        "exp":"Server IP Address and UDP or TCP Protocol"
+      },
+      "log_buffer_size":{
+        "enable":false,
+        "param":"-q",
+        "value":"50",
+        "unit":"none",
+        "options":[],
+        "exp":"Number of packets to push to the log at once"
+      }
+    },
+    "sig_opts":{
+      "signaling_dest_addr":{
+        "enable":false,
+        "param":"-Sda",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"Set the destination address for the signaling channel default: equal to -a dest_addr"
+      },
+      "signaling_dest_port":{
+        "enable":false,
+        "param":"-Sdp",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"Set the destionation port for the signaling channel, default:9000"
+      },
+      "signaling_src_addr":{
+        "enable":false,
+        "param":"-Ssa",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"Set the source address for the signaling channel, default: set by O.S"
+      },
+      "signaling_src_port":{
+        "enable":false,
+        "param":"-Ssp",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":""
+      },
+      "signaling_interface":{
+        "enable":false,
+        "param":"-Si",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"Set the network interface for the signaling channel"
+      }
+    },
+    "idt_opts":{
+      
+      "rate":{
+        "enable":false,
+        "param":"-C",
+        "value":"UDP",
+        "unit":"pkts per s",
+        "options":[],
+        "exp":""
+      },
+      "uniform_dist":{
+        "enable":false,
+        "param":"-U",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"min rate and max rate "
+      },
+      "exponential_dist":{
+        "enable":false,
+        "param":"-E",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"mean_rate is required "
+      },
+      "normal_dist":{
+        "enable":false,
+        "param":"-N",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<mean><std_dev> normal distribution "
+      },
+      "poisson_dist":{
+        "enable":false,
+        "param":"-O",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<mean>, Poisson distribution"
+      },
+      "pareto_dist":{
+        "enable":false,
+        "param":"-V",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<shape><scale>, Pareto distribution"
+      },
+      "cauchy_dist":{
+        "enable":false,
+        "param":"-Y",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<shape><scale>, Cauchy distribution"
+      },
+      "gamma_dist":{
+        "enable":false,
+        "param":"-G",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<shape><scale>, Gamma distribution"
+      },
+      "weibull_dist":{
+        "enable":false,
+        "param":"-W",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<shape><scale>, Weibull distribution"
+      },
+      "filename":{
+        "enable":false,
+        "param":"-Ft",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"Read IDTs from file in ms"
+      },
+      "gen_bursty_traffic":{
+        "enable":false,
+        "param":"-B",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<onDistro><params> and <offDistro><params>, Weibull distribution"
+      }
+    },
+    "ps_opts":{
+      "pkt_size":{
+        "enable":false,
+        "param":"-c",
+        "value":"512",
+        "unit":"bytes",
+        "options":[],
+        "exp":"Constant default:512 bytes"
+      },"uniform_dist":{
+        "enable":false,
+        "param":"-u",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<min_pkt_size><max_pkt_size>"
+      },"exponential_dist":{
+        "enable":false,
+        "param":"-e",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"average_pkt_size"
+      },"normal_dist":{
+        "enable":false,
+        "param":"-n",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<mean><std_dev>"
+      },"poisson_dist":{
+        "enable":false,
+        "param":"-o",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<mean>"
+      },"pareto_dist":{
+        "enable":false,
+        "param":"-v",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<shape><scale>"
+      },"cauchy_dist":{
+        "enable":false,
+        "param":"-y",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<shape><scale>"
+      },"gamma_dist":{
+        "enable":false,
+        "param":"-g",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<shape><scale>"
+      },"weibull_dist":{
+        "enable":false,
+        "param":"-w",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<shape><scale>"
+      },"filename":{
+        "enable":false,
+        "param":"-Fs",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"<filename>, read payload sizes from file"
+      }
+      
+    },
+    "app_opts":{
+      "telnet":{
+        "enable":false,
+        "param":"Telnet",
+        "value":"none",
+        "unit":"none",
+        "options":[],
+        "exp":"Emulate Telnet traffic"
+      },
+        "DNS":{
+          "enable":false,
+        "param":"DNS",
+        "value":"none",
+        "unit":"none",
+        "options":[],
+        "exp":"Emulate DNS traffic"
+      },
+        "Quake3":{
+          "enable":false,
+        "param":"Quake3",
+        "value":"none",
+        "unit":"none",
+        "options":[],
+        "exp":"Emulate Quake3 traffic"
+      },
+        "CounterStrike_active":{
+          "enable":false,
+        "param":"CSa",
+        "value":"none",
+        "unit":"none",
+        "options":[],
+        "exp":"Emulate CounterStrike traffic, active player"
+      },
+      "CounterStrike_idle":{
+        "enable":false,
+        "param":"CSi",
+        "value":"none",
+        "unit":"none",
+        "options":[],
+        "exp":"Emulate CounterStrike traffic, idle player"
+      },
+        "VoIP":{
+          "enable":false,
+        "param":"VoIP",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"Emulate Voice-over-ip traffic, options: -x <codec>, -h <protocol>, -VAD"
+      }
+    },
+    "misc_opts":{
+       "seed":{
+         "enable":false,
+        "param":"-s",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"-s <seed>, set the seed used for generating dist, default:random"
+      },"poll":{
+        "enable":false,
+        "param":"-poll",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"use busy-wait loop for IDTs shorter than 1 msec"
+      },
+      "mean_pkt_rate":{
+        "enable":false,
+        "param":"-j",
+        "value":"1",
+        "unit":"none",
+        "options":[],
+        "exp":"-j <0|1>, guarantee the mean packet rate: 0 disable, 1 enable"
+      },
+      "sent_serial_iface":{
+        "enable":false,
+        "param":"-sk",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"-sk <serial_iface>, raise a signal on the serial interface when sending packets"
+      },"recv_serial_iface":{
+        "enable":false,
+        "param":"-rk",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"-rk <serial_iface>, Ask ITGRecv to raise a signal on the serial interface when sending packets"
+      }
+      
+    }
+  },
+  "ITGRecv":{
+    "bind_address":{
+      "enable":false,
+        "param":"-a",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"-a <bind_addresss>,Bind data channel to a specific address"
+    },
+    "interface":{
+      "enable":false,
+        "param":"-i",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"-i <interface>,Bind data channel to a specific network interface"
+    },"sig_interface":{
+      "enable":false,
+        "param":"-Si",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"-i <interface>,Bind signaling channels to a specific network interface"
+    },"port":{
+      "enable":false,
+        "param":"-Sp",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"-Sp <port>,Signaling channel port number (default:9000)"
+    },"logfile":{
+      "enable":false,
+        "param":"-l",
+        "value":"ITGRecv",
+        "unit":"none",
+        "options":[],
+        "exp":"-l <logfile>,Enable logging to file"
+    },"remote_logging":{
+      "enable":false,
+        "param":"-L",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"-L [a:<address>][p:<port>][P:<protocol>],Enable remote logging (default:127.0.0.1)"
+    },"log_buffer_size":{
+      "enable":false,
+        "param":"-q",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"-q <log_buffer_size>,Number of packets to push to the log at once, default:50"
+    },"ITGSend_address":{
+      "enable":false,
+        "param":"-H",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"-H <ITGSend_address>, Enable passove mode toward the specified ITGSend instance."
+    },"num_pkt":{
+      "enable":false,
+        "param":"-n",
+        "value":"",
+        "unit":"none",
+        "options":[],
+        "exp":"-n <num_pkt>, Number of outgoing packets for UDP NAT traversal."
+    }
+  },
+  "ITGManager":{},
+  "ITGDec":{},
+  "ITGLog":{}
+}

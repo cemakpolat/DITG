@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+  <TextView
+        android:id="@+id/itgHeader_Manager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ITG Manager"
+        android:paddingLeft="25dp" 
+        android:layout_alignParentTop="true"/>
+    <ListView
+        android:id="@+id/itgmanager_list"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/itgHeader_Manager"
+        android:layout_height="fill_parent" >
+    </ListView>
+</RelativeLayout>
+    <!--
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3">
+            
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="14">
+
+            //This is where you add buttons. You can make them "fill_parent".
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3">
+    </RelativeLayout>
+    -->
